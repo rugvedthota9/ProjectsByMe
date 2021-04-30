@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    padding: 100px;
+    height: 100vh;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    position: relative;
+    font-size: 28px;
+    color: #111;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+header .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url(./menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+header .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url(./menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+header .toggle.active {
+    background: url(./close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navigation {
+    position: absolute;
+    display: flex;
+    right: 150px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation li a {
+    color: #111;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 20px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.navigation.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    height: calc(100% - 200px);
+    width: calc(100% - 200px);
+    z-index: 100;
+}
+
+.container .box {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    border-right: 10px solid #fff;
+}
+
+.container .box:last-child {
+    border-right: none;
+}
+
+.container .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.container .box .imgBx.active {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    height: calc(100% - 200px);
+    width: calc(100% - 200px);
+    z-index: 1000;
+    opacity: 1;
+}
+
+.container .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.container .box .imgBx:hover img {
+    transform: scale(1.2);
+}
+
+.container .box .imgBx.active:hover img {
+    transform: scale(1);
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes | Responsive Movie Landing Page Design</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">Heroes</a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Charecters</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </header>
+        <div class="container">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img1.jpg">
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img2.jpg">
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img3.jpg">
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img4.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let imgBx = document.querySelectorAll('.imgBx');
+        imgBx.forEach(popup => popup.addEventListener('click', () => {
+            popup.classList.toggle('active');
+        }))
+
+        function toggleMenu() {
+            const toggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

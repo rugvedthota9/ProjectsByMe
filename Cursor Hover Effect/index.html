@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Hover Effects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="#"><i class="fa fa-gift" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-glass" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+        </li>
+        <div class="cursor"></div>
+    </ul>
+    <script>
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        })
+    </script>
+</body>
+
+</html>

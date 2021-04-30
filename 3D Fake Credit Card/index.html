@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent 3D Flip Card UI Design</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section>
+        <div class="card">
+            <div class="face front">
+                <h3 class="credit">Credit Card</h3>
+                <h3 class="bank">Bank Name</h3>
+                <img src="./chip.png" class="chip">
+                <h3 class="number">0123 4567 8901 2345</h3>
+                <h5 class="valid"><span>Valid<br>thru</span><span>10/23</span></h5>
+                <h5 class="cardHolder">Rugved Thota</h5>
+            </div>
+
+            <div class="face back">
+                <div class="blackbar"></div>
+                <div class="ccvtext">
+                    <h5>Autorized Signature-not valid unless signed</h5>
+                    <div class="whiteBar"></div>
+                    <div class="ccv">123</div>
+                </div>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quos nulla quisquam atque dolore ipsam soluta iusto ipsum! Harum laboriosam tenetur eos debitis dignissimos? Error nam quod cumque maiores et in vero, nulla commodi ea eum iure eos ratione,
+                    voluptates dignissimos, architecto fugiat voluptate eligendi earum. Consectetur magnam delectus quod doloribus id porro adipisci eos quae fugit? Dignissimos quas reiciendis fugiat soluta dolores aliquid doloremque aliquam qui maxime,
+
+                </p>
+            </div>
+        </div>
+        <script src="./vanilla-tilt.js"></script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelector(".card"), {
+                max: 20,
+                speed: 600,
+                glare: false,
+                "max-glare": 0.2
+            });
+        </script>
+    </section>
+</body>
+
+</html>

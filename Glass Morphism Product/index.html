@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Product Card Slider UI</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <ul class="thumb">
+            <li onclick="changeImgSrc('./shoes1.png');"><img src="./shoes1.png"></li>
+            <li onclick="changeImgSrc('./shoes2.png');"><img src="./shoes2.png"></li>
+            <li onclick="changeImgSrc('./shoes3.png');"><img src="./shoes3.png"></li>
+        </ul>
+        <div class="imgBox">
+            <h2>Nike Air Zoom</h2>
+            <img src="./shoes1.png" class="shoes">
+            <ul class="size">
+                <span>Size</span>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+            </ul>
+            <a href="#" class="btn">Add To Cart</a>
+        </div>
+    </div>
+    <script>
+        function changeImgSrc(anything) {
+            document.querySelector('.shoes').src = anything;
+        }
+    </script>
+</body>
+
+</html>
