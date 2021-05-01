@@ -21,9 +21,11 @@ body {
 
 .planet h2 {
     color: #fff;
-    font-size: 4em;
+    font-size: 5em;
     margin-bottom: 40px;
-    font-weight: 600;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .planet .container {
@@ -205,4 +207,11 @@ body {
     100% {
         background-position: -340px;
     }
+}
+
+p {
+    color: #fff;
+    font-size: 1.8em;
+    letter-spacing: 6px;
+    text-transform: uppe8rcase;
 }
