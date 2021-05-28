@@ -1,64 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heroes | Responsive Movie Landing Page Design</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
-    <section>
-        <header>
-            <a href="#" class="logo">Heroes</a>
-            <div class="toggle" onclick="toggleMenu()"></div>
-            <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Charecters</a></li>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">Games</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-        </header>
-        <div class="container">
-            <div class="box">
-                <div class="imgBx">
-                    <img src="img1.jpg">
-                </div>
-            </div>
-            <div class="box">
-                <div class="imgBx">
-                    <img src="img2.jpg">
-                </div>
-            </div>
-            <div class="box">
-                <div class="imgBx">
-                    <img src="img3.jpg">
-                </div>
-            </div>
-            <div class="box">
-                <div class="imgBx">
-                    <img src="img4.jpg">
-                </div>
-            </div>
-        </div>
-    </section>
+	<section>
+		<header>
+			<a href="#" class="logo">Heroes</a>
+			<div class="toggle" onclick="toggleMenu();"></div>
+			<ul class="navigation">
+				<li><a href="#" style="--i:1;">Home</a></li>
+				<li><a href="#" style="--i:2;">Characters</a></li>
+				<li><a href="#" style="--i:3;">Movies</a></li>
+				<li><a href="#" style="--i:4;">Games</a></li>
+				<li><a href="#" style="--i:5;">More</a></li>
+			</ul>
+		</header>
+		<div class="container">
+			<div class="box" style="--i:3;">
+				<div class="imgBx">
+					<img src="img1.jpg">
+				</div>
+			</div>
+			<div class="box" style="--i:4;">
+				<div class="imgBx">
+					<img src="img2.jpg">
+				</div>
+			</div>
+			<div class="box" style="--i:5;">
+				<div class="imgBx">
+					<img src="img3.jpg">
+				</div>
+			</div>
+			<div class="box" style="--i:6;">
+				<div class="imgBx">
+					<img src="img4.jpg">
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<ul class="sci">
+				<li><a href="#" style="--i:9">Facebook</a></li>
+				<li><a href="#" style="--i:8">Twitter</a></li>
+				<li><a href="#" style="--i:7">Instagram</a></li>
+			</ul>
+			<p class="copyrightText">©Online Tutorials. 2020</p>
+		</div>
+	</section>
+	<script>
+		let imgBx = document.querySelectorAll('.imgBx');
+		imgBx.forEach(popup => popup.addEventListener('click', () =>{
+			popup.classList.toggle('active')
+		}))
 
-    <script>
-        let imgBx = document.querySelectorAll('.imgBx');
-        imgBx.forEach(popup => popup.addEventListener('click', () => {
-            popup.classList.toggle('active');
-        }))
-
-        function toggleMenu() {
-            const toggle = document.querySelector('.toggle');
-            const navigation = document.querySelector('.navigation');
-            toggle.classList.toggle('active');
-            navigation.classList.toggle('active');
-        }
-    </script>
+		function toggleMenu(){
+	      var menuToggle = document.querySelector('.toggle');
+	      var navigation = document.querySelector('.navigation');
+	      menuToggle.classList.toggle('active');
+	      navigation.classList.toggle('active');
+	    }
+	</script>
 </body>
-
 </html>
+

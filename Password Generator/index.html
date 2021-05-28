@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+
+    <body>
+        <div class="inputBox">
+            <h2>Random Password Generator App</h2>
+            <input type="text" name="" placeholder="Create Password" id="password" readonly="">
+            <i class="fa fa-clone fa-3" aria-hidden="true" onclick="copyPassword();"></i>
+            <div id="btn" onclick="getPassword();">Generate Password</div>
+        </div>
+        <div class="alertBox"></div>
+        <script type="text/javascript">
+            var alertBox = document.querySelector('.alertBox');
+
+            function getPassword() {
+
+                var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+?<>:{}[]";
+                var passwordLength = 16;
+                var password = "";
+
+                for (var i = 0; i < passwordLength; i++) {
+                    var randomNumber = Math.floor(Math.random() * chars.length)
+                    password += chars.substring(randomNumber, randomNumber + 1)
+                }
+                document.getElementById("password").value = password;
+                alertBox.innerHTML = "New Password Copied: <br>" + password;
+            }
+
+            function copyPassword() {
+                var copyPassText = document.getElementById("password")
+                copyPassText.select();
+                copyPassText.setSelectionRange(0, 9999);
+                document.execCommand("copy");
+                alertBox.classList.toggle('active');
+                setTimeout(function() {
+                    alertBox.classList.toggle('active');
+                }, 2000)
+            }
+        </script>
+    </body>
+
+</html>
